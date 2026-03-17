@@ -5,14 +5,16 @@ import axios from 'axios';
 const Home = () => {
   const [incidents, setIncidents] = useState([]);
 
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
   useEffect(() => {
-    axios.get("http://localhost:8080/incidents")
+    axios.get(`${API_URL}/incidents`)
       .then(response => setIncidents(response.data))
       .catch(error => console.error(error));
   }, []);
 
   const deleteIncident = (id) => {
-    axios.delete(`http://localhost:8080/incidents/${id}`)
+    axios.delete(`${API_URL}/incidents/${id}`)
       .then(() => {
         setIncidents(incidents.filter(i => i.id !== id));
       });
