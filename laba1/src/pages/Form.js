@@ -17,7 +17,7 @@ const Form = () => {
       riskLevel: riskRef.current.value
     };
 
-    axios.post("http://localhost:5001/incidents", newIncident)
+    axios.post("http://localhost:8080/incidents", newIncident)
       .then(() => navigate('/'));
   };
 

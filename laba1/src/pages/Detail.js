@@ -11,7 +11,7 @@ const Detail = () => {
   const riskRef = useRef(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5001/incidents/${id}`)
+    axios.get(`http://localhost:8080/incidents/${id}`)
       .then(res => {
         titleRef.current.value = res.data.title;
         locationRef.current.value = res.data.location;
@@ -28,7 +28,7 @@ const Detail = () => {
       riskLevel: riskRef.current.value
     };
 
-    axios.put(`http://localhost:5001/incidents/${id}`, JSON.stringify(updatedIncident), {
+    axios.put(`http://localhost:8080/incidents/${id}`, JSON.stringify(updatedIncident), {
       headers: { 'Content-Type': 'application/json' }
     })
       .then(() => navigate('/'))
