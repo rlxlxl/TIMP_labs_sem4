@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Безопасность морского и речного транспорта</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #1a5276;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #2980b9;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #1a5276;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section h3 {
+            color: #2980b9;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .safety-rules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .rule-card {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f2 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2980b9;
+            transition: transform 0.3s ease;
+        }
+
+        .rule-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .rule-card h4 {
+            color: #1a5276;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        ul li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        ul li::before {
+            content: "✓";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .warning strong {
+            color: #d35400;
+        }
+
+        .danger {
+            background: #f8d7da;
+            border-left: 4px solid #e74c3c;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .danger strong {
+            color: #c0392b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table th,
+        table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background: #1a5276;
+            color: white;
+        }
+
+        table tr:hover {
+            background: #f5f5f5;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            color: #1a5276;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .safety-rules {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚢 Безопасность морского и речного транспорта</h1>
+        <p>Основные правила и рекомендации для пассажиров</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>Введение</h2>
+            <p>
+                Водный транспорт является одним из самых древних и надёжных способов передвижения. 
+                Однако, как и любой другой вид транспорта, он требует соблюдения определённых правил 
+                безопасности для защиты жизни и здоровья пассажиров.
+            </p>
+            <div class="warning">
+                <strong>⚠️ Важно:</strong> Соблюдение правил безопасности на водном транспорте 
+                обязательно для всех пассажиров без исключения.
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Основные правила безопасности</h2>
+            <div class="safety-rules">
+                <div class="rule-card">
+                    <h4><span class="icon">🦺</span> Спасательные жилеты</h4>
+                    <p>Всегда используйте спасательный жилет при нахождении на открытых палубах малых судов. Убедитесь, что жилет правильно застёгнут.</p>
+                </div>
+                <div class="rule-card">
+                    <h4><span class="icon">📍</span> Посадка и высадка</h4>
+                    <p>Производите посадку только в специально отведённых местах. Дождитесь полной остановки судна перед выходом.</p>
+                </div>
+                <div class="rule-card">
+                    <h4><span class="icon">🚫</span> Запрещённые действия</h4>
+                    <p>Не наклоняйтесь за борт, не садитесь на перила, не переходите без необходимости на другую сторону судна во время движения.</p>
+                </div>
+                <div class="rule-card">
+                    <h4><span class="icon">👶</span> Дети на борту</h4>
+                    <p>Дети должны находиться под постоянным присмотром взрослых. Для детей обязательны детские спасательные жилеты.</p>
+                </div>
+                <div class="rule-card">
+                    <h4><span class="icon">🌊</span> Погодные условия</h4>
+                    <p>Следуйте указаниям экипажа при ухудшении погодных условий. При сильной качке оставайтесь в каютах или закрытых помещениях.</p>
+                </div>
+                <div class="rule-card">
+                    <h4><span class="icon">🔥</span> Пожарная безопасность</h4>
+                    <p>Курение разрешено только в специально отведённых местах. Не пользуйтесь открытым огнём на борту судна.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Спасательные средства на судне</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Средство</th>
+                        <th>Назначение</th>
+                        <th>Особенности использования</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Спасательный жилет</td>
+                        <td>Поддержание человека на плаву</td>
+                        <td>Надевается через голову, застёгивается на ремни</td>
+                    </tr>
+                    <tr>
+                        <td>Спасательный круг</td>
+                        <td>Экстренная помощь на воде</td>
+                        <td>Бросается пострадавшему, требует умения пользования</td>
+                    </tr>
+                    <tr>
+                        <td>Спасательный плот</td>
+                        <td>Эвакуация с судна</td>
+                        <td>Автоматически надувается при контакте с водой</td>
+                    </tr>
+                    <tr>
+                        <td>Гидрокостюм</td>
+                        <td>Защита от переохлаждения</td>
+                        <td>Используется в холодных водах</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2>Действия в аварийной ситуации</h2>
+            <h3>При получении сигнала тревоги:</h3>
+            <ul>
+                <li>Сохраняйте спокойствие и не создавайте панику</li>
+                <li>Внимательно прослушайте объявления капитана</li>
+                <li>Наденьте спасательный жилет согласно инструкции</li>
+                <li>Проследуйте к месту сбора (указано в вашем билете/каюте)</li>
+                <li>Выполняйте все указания экипажа</li>
+                <li>Помогайте детям, пожилым людям и людям с ограниченными возможностями</li>
+            </ul>
+
+            <div class="danger">
+                <strong>🚨 Запрещено:</strong>
+                <ul>
+                    <li>Прыгать за борт без команды экипажа</li>
+                    <li>Возвращаться в каюты за личными вещами</li>
+                    <li>Загораживать проходы и выходы</li>
+                    <li>Пользоваться лифтами во время эвакуации</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Особенности речного транспорта</h2>
+            <p>Речной транспорт имеет свои особенности, которые необходимо учитывать:</p>
+            <ul>
+                <li><strong>Малая глубина:</strong> Речные суда часто имеют меньшую осадку, что делает их более чувствительными к волнению</li>
+                <li><strong>Береговая линия:</strong> При приближении к берегу будьте осторожны — возможны резкие манёвры судна</li>
+                <li><strong>Мосты и шлюзы:</strong> Во время прохождения под мостами и через шлюзы оставайтесь на местах</li>
+                <li><strong>Течение:</strong> Учитывайте силу течения при нахождении на открытых палубах</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Международные конвенции</h2>
+            <p>Безопасность морского и речного транспорта регулируется международными документами:</p>
+            <ul>
+                <li><strong>SOLAS</strong> — Международная конвенция по охране человеческой жизни на море</li>
+                <li><strong>MARPOL</strong> — Конвенция по предотвращению загрязнения с судов</li>
+                <li><strong>STCW</strong> — Конвенция о подготовке и дипломировании моряков</li>
+                <li><strong>Кодекс ВСК</strong> — Международный кодекс безопасности для скоростных судов</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Безопасность на водном транспорте</p>
+        <p>Помните: ваша безопасность зависит от соблюдения правил!</p>
+    </footer>
+</body>
+</html>
