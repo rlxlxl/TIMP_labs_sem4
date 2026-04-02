@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
 const Detail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -11,7 +13,7 @@ const Detail = () => {
   const riskRef = useRef(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/incidents/${id}`)
+    axios.get(`${API_URL}/incidents/${id}`)
       .then(res => {
         titleRef.current.value = res.data.title;
         locationRef.current.value = res.data.location;
@@ -28,7 +30,7 @@ const Detail = () => {
       riskLevel: riskRef.current.value
     };
 
-    axios.put(`http://localhost:8080/incidents/${id}`, JSON.stringify(updatedIncident), {
+    axios.put(`${API_URL}/incidents/${id}`, JSON.stringify(updatedIncident), {
       headers: { 'Content-Type': 'application/json' }
     })
       .then(() => navigate('/'))

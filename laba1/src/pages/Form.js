@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
 const Form = () => {
   const titleRef = useRef(null);
   const locationRef = useRef(null);
@@ -17,7 +19,7 @@ const Form = () => {
       riskLevel: riskRef.current.value
     };
 
-    axios.post("http://localhost:8080/incidents", newIncident)
+    axios.post(`${API_URL}/incidents`, newIncident)
       .then(() => navigate('/'));
   };
 

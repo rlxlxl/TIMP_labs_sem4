@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
 const Home = () => {
   const [incidents, setIncidents] = useState([]);
-
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
 
   useEffect(() => {
     axios.get(`${API_URL}/incidents`)
